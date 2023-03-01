@@ -1,13 +1,20 @@
-pipeline {
-    agent any
-    options {
-        // Timeout counter starts AFTER agent is allocated
-        timeout(time: 1, unit: 'SECONDS')
-    }
-    stages {
-        stage('Example') {
-            steps {
-                echo 'Hello World'
+    pipeline {
+        agent any
+        
+        stages {
+            stage('Stage one') {
+                steps {
+                    script {
+                        echo "this is stage one"
+                    }
+                }
+            }
+            stage('Stage two') {
+                steps {
+                    script {
+                        echo "This is stage 2"
+                    }
+                }
             }
         }
     }
