@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage('Example') {
             steps {
-                echo 'Hello World'
+                echo 'Deleting old container and image'
+                sh 'whoami'
             }
         }
     }
