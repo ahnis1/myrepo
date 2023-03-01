@@ -10,6 +10,7 @@ pipeline {
                 echo 'Deleting old container and image'
                 sh 'whoami'
                 sh 'pwd'
+                docker ps
                 
             }
         }
