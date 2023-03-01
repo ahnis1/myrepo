@@ -2,17 +2,27 @@
         agent any
         
         stages {
-            stage('Stage one') {
+            stage('Cleaning stage') {
                 steps {
                     script {
-                        echo "this is stage one"
+                        echo "This stage is removing old containers and images"
+                        
                     }
                 }
             }
-            stage('Stage two') {
+            
+            stage('Buidling stage') {
                 steps {
                     script {
-                        echo "This is stage 2"
+                        echo "This is building the docker image from Dockerfile and creating a new image from latest code"
+                    }
+                }
+            }
+            
+            stage('Testing code') {
+                steps {
+                    script {
+                        echo "Automation scripts can be executed here"
                     }
                 }
             }
