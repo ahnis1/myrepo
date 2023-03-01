@@ -9,7 +9,8 @@ pipeline {
             steps {
                 echo 'Deleting old container and image'
                 sh 'whoami'
-                sh 'docker ps'
+                sh 'pwd'
+                sh 'sudo docker ps'
             }
         }
     }
