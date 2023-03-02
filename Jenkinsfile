@@ -8,6 +8,7 @@ pipeline {
                 sh '''
                     docker rm --force nodehelloworld-container
                     docker rmi --force nodehelloworld
+                    
                     '''
                 
                 
