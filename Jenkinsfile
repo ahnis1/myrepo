@@ -5,12 +5,22 @@ pipeline {
         timeout(time: 1, unit: 'SECONDS')
     }
     stages {
-        stage('Example') {
+        stage('Image Building') {
             steps {
                 echo 'Deleting old container and image'
                 sh 'whoami'
+                 echo 'creating new image'
                 sh 'pwd'
-                docker ps
+                
+                
+            }
+        }
+        stage('Container Deployment') {
+            steps {
+                echo 'creating container from image'
+                sh 'whoami'
+                sh 'pwd'
+                
                 
             }
         }
