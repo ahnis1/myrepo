@@ -20,6 +20,7 @@ pipeline {
                 echo 'creating container from image'
                 sh 'whoami'
                 sh 'pwd'
+                sh 'docker ps'
                 
                 
             }
