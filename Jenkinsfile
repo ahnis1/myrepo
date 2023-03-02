@@ -11,7 +11,6 @@ pipeline {
                 echo 'Deleting old image'
                 sh '''
                     docker stop nodehelloworld
-                    docker ps
                     '''
                 
                 
