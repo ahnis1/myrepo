@@ -7,20 +7,20 @@ pipeline {
     stages {
         stage('Image Building') {
             steps {
-                echo 'Deleting old container and image'
-                sh 'whoami'
-                 echo 'creating new image'
-                sh 'pwd'
+                echo 'Deleting old image'
+                sh '''docker rm nodehelloworld -f'''
+                echo 'Deleting old image'
+                sh '''docker rmi nodehelloworld -f'''
                 
                 
             }
         }
         stage('Container Deployment') {
             steps {
-                echo 'creating container from image'
-                sh 'whoami'
-                sh 'pwd'
-                sh '''docker ps'''
+                echo 'creating new container from image'
+                sh '''docker build -t nodehelloworld .'''
+                
+                sh '''docker run -d -p 3030:3030 --name nodehelloworld nodehelloworld'''
                 
                 
             }
