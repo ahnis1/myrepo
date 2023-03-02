@@ -8,10 +8,11 @@ pipeline {
         stage('Image Building') {
             steps {
                 echo 'Deleting old image'
-                  sh '''docker ps'''
-            //    sh '''docker rm nodehelloworld -f'''
+                sh '''docker ps'''
+                sh '''docker rm nodehelloworld -f'''
                 echo 'Deleting old image'
-             //   sh '''docker rmi nodehelloworld -f'''
+                sh '''docker rmi nodehelloworld -f'''
+                sh '''docker ps'''
                 
                 
             }
