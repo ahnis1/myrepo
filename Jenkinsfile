@@ -10,7 +10,7 @@ pipeline {
                 echo 'Deleting old image'
                 echo 'Deleting old image'
                 sh '''
-                    docker stop nodehelloworld
+                    docker rm --force nodehelloworld
                     '''
                 
                 
